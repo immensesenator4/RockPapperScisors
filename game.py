@@ -20,10 +20,10 @@ if input("hosting ye or ne")=="ye":
             y=input("rock papper scisors choose one\n \t->")            
             if y in s or y in "leave":
                 z=y
+        
+        h.send(y,conn)
         if z in "leave":
             break
-        h.send(y,conn)
-        
         data = None
         while not data:
             try:
@@ -60,6 +60,9 @@ else:
         h.send(y)
 
         opp = findspot(data,s)
+        if data == "leave":
+            print("temination forced\nConection Lost\n\thost terminated conection")
+            break
         if z== s[opp-1]:
             print("you loose")
         elif z == s[opp]:
