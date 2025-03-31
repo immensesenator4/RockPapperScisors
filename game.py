@@ -5,8 +5,8 @@ def findspot(str,list):
     for i in range(0,len(list)):
         if list[i]==str:
             return i
-        
-s=["rock","papper","scisors","leave"]
+    return 0
+s=["rock","papper","scisors"]
 if input("hosting ye or ne")=="ye":
     h.host()
     conn = None
@@ -17,8 +17,8 @@ if input("hosting ye or ne")=="ye":
         
         z=None
         while not z:
-            y=input("rock papper scisors choose")
-            if y in s :
+            y=input("rock papper scisors choose one\n \t->")            
+            if y in s or y in "leave":
                 z=y
         if z in "leave":
             break
@@ -33,7 +33,7 @@ if input("hosting ye or ne")=="ye":
         opp = findspot(data,s)
         if z== s[opp-1]:
             print("you loose")
-        elif z == data:
+        elif z == s[opp]:
             print("tie")
         else:
             print("you win")
@@ -46,7 +46,7 @@ else:
     while True:
         z=None
         while not z:
-            y=input("rock papper scisors choose")
+            y=input("rock papper scisors choose one\n \t->")
             if y in s :
                 z=y
                 data = None
@@ -62,7 +62,7 @@ else:
         opp = findspot(data,s)
         if z== s[opp-1]:
             print("you loose")
-        elif z == data:
+        elif z == s[opp]:
             print("tie")
         else:
             print("you win")
