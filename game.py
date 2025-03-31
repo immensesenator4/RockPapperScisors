@@ -61,7 +61,7 @@ else:
 
         opp = findspot(data,s)
         if data == "leave":
-            print("temination forced\nConection Lost\n\thost terminated conection")
+            print("temination forced\nConection Lost\nReason :Conection terminated by Host")
             break
         if z== s[opp-1]:
             print("you loose")
