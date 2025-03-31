@@ -31,7 +31,7 @@ if input("hosting ye or ne")=="ye":
             except Exception  as e:
                 print(e)
         opp = findspot(data,s)
-        print("opponet chose : "+data)
+        print("opponent chose : "+data)
         if z== s[opp-1]:
             print("you loose")
         elif z == s[opp]:
@@ -64,7 +64,7 @@ else:
         if data == "leave":
             print("temination forced\nConection Lost\nReason : Conection terminated by Host")
             break
-        print("opponet chose : "+data)
+        print("opponent chose : "+data)
         if z== s[opp-1]:
             print("you loose")
         elif z == s[opp]:
