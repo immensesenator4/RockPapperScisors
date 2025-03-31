@@ -47,7 +47,7 @@ else:
         z=None
         while not z:
             y=input("rock papper scisors choose one\n \t->")
-            if y in s :
+            if y in s or y in "leave":
                 z=y
                 data = None
         if z in "leave":
